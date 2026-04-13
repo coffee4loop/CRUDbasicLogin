@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nav with Image Buttons</title>
+    <style>
+    /* Nav bar container */
+    .header {
+        display: block;
+        justify-content: center;
+        gap: 20px;
+        background-color: rgba(255,255,255,0.1);
+        padding: 10px;
+    }
+
+    /* Nav buttons */
+    .header a {
+        display: inline-block;
+        padding: 8px 20px;
+        background: url('backgroundbutton.jpg') no-repeat center/cover; /* starting image */
+        color: #ff3b0f;              /* ember text color */
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s; /* smooth hover */
+        text-shadow: 1px 1px 0  #B2B2B2, -1px -1px 0  #B2B2B2, 1px -1px 0  #B2B2B2, -1px 1px 0 #B2B2B2; /* black outline */
+    }
+
+    /* Hover effect using new image */
+    .header a:hover {
+        background: url('hoverbutton.jpg') no-repeat center/cover; /* image on hover */
+    }
+    </style>
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav class="header">
+        <a href="home.php">Home</a>
+        <a href="home.php?logout=1">Logout</a>
+    </nav>
+</body>
+</html>
+
+
+<?php
+session_start();
+
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    header("Location: index.php");
+    exit;
+}
+
+if(!isset($_SESSION['email'])){
+    header("location: index.php");
+    die();
+    exit;
+}
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Complete Login and Register System </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="theme.css">
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="body">
+            <h2 class="form-title">Riddle</h2>
+
+            <div class="desc">
+                <p>
+                You bought me for school.<br>
+                We both know that's a lie.<br><br>
+
+                One tab for homework,<br>
+                Thirty tabs open... why?<br>
+                Memes flying by.<br><br>
+
+                My fans scream for mercy.<br>
+                My RAM's asking why.<br><br>
+
+                You said you'd “just check one thing.”<br>
+                That was three hours by.<br><br>
+
+                Click once...<br>
+                Nothing moves.<br>
+                Click again...<br>
+                Still frozen.<br><br>
+
+                Task Manager opens.<br>
+                Your hopes slowly die.<br><br>
+
+                You whisper to the screen,<br>
+                “Please... don't crash tonight.”<br><br>
+
+                I freeze anyway.<br>
+                Goodbye.<br><br>
+
+                <strong>What am I?</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

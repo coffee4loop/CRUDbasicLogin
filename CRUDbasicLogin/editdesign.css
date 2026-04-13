@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Stops the vertical stretching */
+    min-height: 100vh;       /* Ensures the body covers the full screen height */
+    margin: 0;               /* Removes that default browser gap */
+    padding-top: 50px;       /* Keeps your spacing at the top */
+}
+
+.edit-container {
+    background: white;
+    padding: 0; /* Changed to 0 to let borders go edge-to-edge */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 380px;
+    overflow: hidden; /* Keeps corners rounded */
+    border: 1px solid #ccc;
+}
+
+h2 {
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 2px solid #eeeeee; /* The horizontal grey line for the topic */
+}
+
+form {
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Normal empty white input boxes */
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    background-color: #ffffff; 
+}
+
+/* Centering the button at the bottom */
+.button-group {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee; /* Divider before button */
+    display: flex;
+    flex-direction: column; /* Stack them to center easily */
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-update {
+    background-color: #ff3b0f; /* Ember color */
+    color: white;
+    border: none;
+    padding: 12px 40px; /* Wider button */
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto;
+}
+
+.btn-update:hover {
+    background-color: #e6350d;
+}
+
+.btn-cancel {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+}

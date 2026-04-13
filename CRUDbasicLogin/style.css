@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#wrapper {
+    width: 400px;
+    margin: 50px auto;
+}
+
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+
+    background: rgba(255,255,255,0.15); /* glass layer */
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-title {
+    color: #333;
+}
